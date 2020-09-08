@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.springframe5</groupId>
     <artifactId>hwt-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>hwt-pet-clinic</name>
     <description>HWT Pet Clinic</description>
 
@@ -42,7 +42,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:hlaingwintunn/hwt-pet-clinic.git</developerConnection>
-      <tag>hwt-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
