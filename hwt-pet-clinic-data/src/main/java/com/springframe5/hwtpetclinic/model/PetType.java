@@ -1,6 +1,6 @@
 package com.springframe5.hwtpetclinic.model;
 
-public class PetType {
+public class PetType extends BaseEntity {
 
     private String name;
 
