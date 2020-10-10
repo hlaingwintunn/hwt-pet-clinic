@@ -48,16 +48,6 @@ class OwnerControllerTest {
     }
 
     @Test
-    void ownerLists() throws Exception {
-        when(ownerService.findAll()).thenReturn(owners);
-
-        mockMvc.perform(get("/owners"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("owners/index"))
-                .andExpect(model().attribute("owners", hasSize(2)));
-    }
-
-    @Test
     void ownerListsByIndex() throws Exception {
         when(ownerService.findAll()).thenReturn(owners);
 
@@ -71,7 +61,7 @@ class OwnerControllerTest {
     void findOwners() throws Exception {
         mockMvc.perform(get("/owners/find"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("notimplemented"));
+                .andExpect(view().name("owners/findOwners"));
         verifyNoInteractions(ownerService);
     }
 
@@ -129,7 +119,7 @@ class OwnerControllerTest {
 
     @Test
     void processCreationForm() throws Exception {
-        when(ownerService.save(ArgumentMatchers.any())).thenReturn(Owner.builder().id(1L).build());
+        when(ownerService.save(ArgumentMatchers.any())).thenReturn(Owner.builder().id(1l).build());
 
         mockMvc.perform(post("/owners/new"))
                 .andExpect(status().is3xxRedirection())
