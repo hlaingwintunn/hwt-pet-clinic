@@ -49,6 +49,7 @@ public class PetContorller {
     @GetMapping("/pets/new")
     public String initCreationForm(Owner owner, Model model) {
         Pet pet = new Pet();
+        pet.setPetType(new PetType());
         owner.getPets().add(pet);
         pet.setOwner(owner);
         model.addAttribute("pet", pet);
