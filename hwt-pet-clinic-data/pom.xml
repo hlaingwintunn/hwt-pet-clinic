@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hwt-pet-clinic-data</artifactId>
-  <version>0.0.1</version>
+    <version>0.0.1</version>
 
     <properties>
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
@@ -51,9 +51,6 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
